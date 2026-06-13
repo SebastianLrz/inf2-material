@@ -7,9 +7,9 @@ package aufgabe2
 //          Beim Entfernen eines Elements muss auch die Länge der Liste angepasst werden.
 // MAX. PUNKTE: 10
 
-// RemoveAll entfernt alle Elemente mit dem Wert value aus der Liste.
-// Wenn value in der Liste nicht vorkommt, soll die Liste unverändert bleiben.
-// Die Funktion liefert den neuen Kopf der Liste zurück.
+//entfernt allemit Wert value
+//Wennvalue nicht vorkommt,List unveränder
+//liefert den neuen Kopf der Liste zurück.
 func (n *Node) RemoveAll(value int) *Node {
 	if n.IsEmpty() {
 		return n

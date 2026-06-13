@@ -7,14 +7,13 @@ import "slices"
 //          Graphen. Die zu implementierende Funktion ist eine Methode dieses Structs.
 // MAX. PUNKTE: 10
 
-// NodesWithDistance soll eine Liste aller Knoten liefern, die in genau d Schritten
+//Liste aller Knoten liefern,diein genau d Shrittn
 // von n aus erreichbar sind.
-// Die Liste soll keine Duplikate enthalten, sie muss aber nicht sortiert sein.
-// Der Knoten n selbst ist in 0 Schritten von n aus erreichbar,
-// seine direkten Nachbarn sind in 1 Schritt erreichbar, usw.
+//keine Dplikte enthalten,muss nicht sortiert sein
+//n selbst ist in 0 Schritten von n aus erreichba
+//seine direkten Nchbrn sind in 1 Schrtt errchbar
 func (n *Node) NodesWithDistance(d int) []*Node {
 	result := []*Node{n}
-
 	for ; d > 0; d-- {
 		frontier := []*Node{}
 		for _, n := range result {

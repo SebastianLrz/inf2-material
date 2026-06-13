@@ -7,8 +7,8 @@ package aufgabe2
 //          Beim Entfernen eines Elements muss auch die Länge der Liste angepasst werden.
 // MAX. PUNKTE: 10
 
-// RemoveAt entfernt das Element an der Stelle index aus der Liste.
-// Wenn index eine ungültige Position ist, soll die Liste unverändert bleiben.
+//entfernt Element an index aus Liste
+//index ungültig Liste gleich bleiben.
 func (n *Node) RemoveAt(index int) {
 	if index < 0 || n.IsEmpty() {
 		return
@@ -23,7 +23,7 @@ func (n *Node) RemoveAt(index int) {
 		n.Next = n.Next.Next
 		n.Length--
 		return
-	}
+	} //Nodes haben Lenght drin
 	nextlen := n.Next.Length
 	n.Next.RemoveAt(index - 1)
 	if nextlen != n.Next.Length {

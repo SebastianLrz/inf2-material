@@ -1,5 +1,9 @@
 package aufgabe3
 
+import (
+	"strings"
+)
+
 // AUFGABENSTELLUNG: Vervollständigen Sie die vorgegebene Funktion.
 // KONTEXT: In der Datei graph.go finden Sie eine Implementierung eines Knotens in einem
 //          Graphen. Die zu implementierende Funktion ist eine Methode dieses Structs.
@@ -10,6 +14,13 @@ package aufgabe3
 // Falls keine solchen Nachbarn existieren, soll nil zurückgegeben werden.
 func (n *Node) FirstNeighbourStartingWith(prefix string) *Node {
 	var result *Node
-	// TODO
+	result = nil
+
+	for _, value := range n.neighbours {
+		if strings.HasPrefix(value.Label, prefix) {
+			return value
+		}
+	}
+
 	return result
 }

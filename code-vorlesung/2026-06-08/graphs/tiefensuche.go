@@ -2,7 +2,7 @@ package graphs
 
 import "slices"
 
-// Tiefensuche nach allen erreichbaren Knoten von start aus.
+// Tiefensuche alle erreihbarn Knoten von start aus.
 func (g *Graph) NodesDFS(start string) []string {
 	visited := []string{start}
 	for _, n := range g.edges[start] {

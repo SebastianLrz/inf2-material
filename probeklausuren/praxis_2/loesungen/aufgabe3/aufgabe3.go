@@ -5,7 +5,7 @@ package aufgabe3
 //          Graphen. Die zu implementierende Funktion ist eine Methode dieses Structs.
 // MAX. PUNKTE: 10
 
-// HasNeighbour prüft, ob n einen Nachbarn mit dem angegebenen Label hat.
+//prüft, ob n Nachbarn mit anggebnen Label hat.
 func (n *Node) HasNeighbour(label string) bool {
 	for _, neighbour := range n.neighbours {
 		if neighbour.Label == label {

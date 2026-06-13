@@ -10,5 +10,19 @@ package aufgabe2
 // RemoveAt entfernt das Element an der Stelle index aus der Liste.
 // Wenn index eine ungültige Position ist, soll die Liste unverändert bleiben.
 func (n *Node) RemoveAt(index int) {
-	// TODO
+
+	if index < 0 || n.IsEmpty() {
+		return
+	}
+
+	if index == 0 {
+		n = n.Next
+		return
+	}
+	if index == 1 {
+		n.Next = n.Next.Next
+	}
+
+	n.Next.RemoveAt(index - 1)
+
 }

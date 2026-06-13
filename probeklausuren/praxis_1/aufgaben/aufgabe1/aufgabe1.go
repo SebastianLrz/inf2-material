@@ -7,6 +7,13 @@ package aufgabe1
 
 // LengthGreater5 gibt true zurück, wenn die Länge der Liste größer als 5 ist, sonst false.
 func (n *Node) LengthGreater5() bool {
-	// TODO
-	return false
+	length := 0
+
+	for n.IsEmpty() == false {
+		length++
+		n = n.Next
+
+	}
+
+	return length > 5
 }
